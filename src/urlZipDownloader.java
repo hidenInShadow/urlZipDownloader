@@ -8,7 +8,6 @@ public class urlZipDownloader {
         downloadList.downloadList(listOfUrl);
     }
 
-
 }
 
 
