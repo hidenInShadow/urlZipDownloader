@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class downloadZip {
-    public static void zipDownloader(ArrayList<String> listOfUrl) {
-        ExecutorService executorService = Executors.newFixedThreadPool(listOfUrl.size());
+public class DownloadZip {
+    private static final int numOfThreads = 3;
+    public void zipDownloader(ArrayList<String> listOfUrl) {
+        ExecutorService executorService = Executors.newFixedThreadPool(numOfThreads);
         for (String element : listOfUrl) {
             executorService.execute(new Runnable() {
                 public void run() {
